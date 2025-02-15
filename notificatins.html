@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="notificationcontainer">
+        <div class="one">
+            <button onclick="window.location.href='max.html'">
+                <span class="material-icons">arrow_back</span>
+            </button>
+        </div>
+        
+        <header>notifications</header>
+        <div class="two">
+            <button>  <span class="material-icons">delete</span></button>
+        </div>
+    </div>
+    <div class="note">
+        <div class="container">
+        <div>  <img src="dress2.jpg">
+        </div>
+            <div class="detail">
+                <h2>order delivered</h2>
+                <h3>your product containing max kurti& your order is delivered</h3>
+                <div>
+                    thursdat oct 5 2024
+                </div>
+            </div>
+            <div class="delete">
+                <button><span class="material-icons">delete</span></button>
+            </div>
+        </div>
+            <div class="container">
+                <div>
+                <img src="dress3.jpg">
+            </div>
+                <div class="detail">
+                    <h2>order delivered</h2>
+                    <h3>your product containing max kurti& your order is delivered</h3>
+                    <div>
+                        thursdat oct 35 2024
+                    </div>
+                </div>
+                <div class="delete">
+                    <button><span class="material-icons">delete</span></button>
+                </div>
+            </div>
+                <div class="container">
+                    <div>
+                    <img src="dress3.jpg">
+                </div>
+                    <div class="detail">
+                        <h2>scratch card& win free gifts</h2>
+                        <h3>grab exciting FREE rewards from your previous purchases & laim your reward></h3>
+                        <div>
+                            wed oct 18 2024
+                        </div>
+                    </div>
+                    <div class="delete">
+                        <button><span class="material-icons">delete</span></button>
+                    </div>
+                </div>
+                </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      
+    }
+
+    .container div img{
+        margin-left: 60px;
+        width: 150px;
+        height: 150px;
+    }
+    
+.delete{
+   margin-right: 90px;
+    align-items: center;
+    display: flex;
+   
+    justify-content: end;
+}
+.detail{
+  display: flex;
+  flex-flow: column;
+    margin-left: 80px;
+}
+.detail h2,h3,div{
+    padding: 10px;
+  
+}
+img{
+    border-radius: 7px;
+}
+    .one {
+ 
+        display: flex;
+        justify-content:left;
+        align-items: center;
+        margin-left: 100px;
+    
+    }
+    .two{
+        
+        display: flex;
+        justify-content:right;
+        align-items: center;
+        margin-right: 100px;
+    }
+   .delete button{
+    background-color: #fff;
+    border:none;
+   }
+
+    .notificationcontainer {
+        position: fixed;
+        height: 100px;
+        width: 100%;
+        text-align: center;
+        background-color:#9db6C9;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+
+    }
+    header {
+        text-transform: uppercase;
+        font-size: large;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    .note {
+        position: relative;
+        top: 100px;
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        background-color: #f9f9f9;
+        width: 100%;
+        height: 100vh;
+        gap: 3px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+background-color:#fff;
+        width: 100%;
+        height: 200px;
+    }
+
+.one button,.two button{
+display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#9db6C9;
+    color: #f9f9f9;
+    width: 30px;
+    height: 25px;
+    border-radius: 3px;
+    border: 5px solid #9db6C9;
+}
+
+@media (max-width: 768px) {
+    .notificationcontainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .container {
+        grid-template-columns: 1fr; 
+        height: auto;
+    }
+
+    .detail {
+        margin-left: 20px; }
+
+    .one, .two {
+        margin: 0 20px; 
+    }
+
+    .delete {
+        margin-right: 20px;
+    }
+
+    .container div img {
+        margin-left: 0; 
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: medium; 
+    }
+
+    .one button, .two button {
+        width: 25px; 
+        height: 20px; 
+    }
+
+    .detail h2, h3, div {
+        font-size: small; 
+    }
+}
+
+   
+</style>
+
+</html>

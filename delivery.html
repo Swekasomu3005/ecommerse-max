@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Delivery Details</h2>
+    <form>
+        <label>Name:</label>
+        <input type="text" required><br>
+
+        <label>Address:</label>
+        <textarea required></textarea><br>
+
+        <label>Phone:</label>
+        <input type="tel" required><br>
+
+        <button type="submit">Confirm Order</button>
+    </form>
+</body>
+<script>
+    // Function to add items to localStorage
+function addToBag(name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ name, price });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to bag!");
+}
+
+// Function to display items in "My Bag"
+function loadBag() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let bagContainer = document.getElementById("bag-items");
+    let total = 0;
+
+    if (cart.length === 0) {
+        bagContainer.innerHTML = "<p>Your bag is empty</p>";
+    } else {
+        bagContainer.innerHTML = "";
+        cart.forEach(item => {
+            let div = document.createElement("div");
+            div.innerHTML = `${item.name} - ₹${item.price}`;
+            bagContainer.appendChild(div);
+            total += item.price;
+        });
+
+        document.getElementById("total-price").textContent = total;
+    }
+}
+
+// Load bag data when "My Bag" page loads
+if (window.location.pathname.includes("my-bag.html")) {
+    loadBag();
+}
+
+</script>
+</html>

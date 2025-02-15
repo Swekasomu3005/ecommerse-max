@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class="header">
+        <button > back</button>
+        <h1>bag</h1>
+    </div>
+    <div class="filters">
+        <div class="dropdown">
+            <button class="dropbtn">PRICE</button>
+            <div class="dropdowncontent">
+                <a href="#">$0 - $500</a>
+                <a href="#">$510 - $1000</a>
+                <a href="#">$1001 - $2000</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">COLORS</button>
+            <div class="dropdowncontent">
+                <a href="#">Red</a>
+                <a href="#">Blue</a>
+                <a href="#">Green</a>
+                <a href="#">Black</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">STORAGE</button>
+            <div class="dropdowncontent">
+                <a href="#">32GB</a>
+                <a href="#">64GB</a>
+                <a href="#">128GB</a>
+                
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">BRAND</button>
+            <div class="dropdowncontent">
+                <a href="#">Cotton</a>
+                <a href="#">Polyester</a>
+                <a href="#">Linen</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">STARS</button>
+            <div class="dropdowncontent">
+                <a href="#">1 Star</a>
+                <a href="#">2 Stars</a>
+                <a href="#">3 Stars</a>
+                <a href="#">4 Stars</a>
+                <a href="#">5 Stars</a>
+            </div>
+        </div>
+       
+        <div class="dropdown">
+            <button class="dropbtn">BRAND</button>
+            <div class="dropdowncontent">
+                <a href="#">VIVO</a>
+                <a href="#">POCO</a>
+                <a href="#">SAMSUNG</a>
+                <a href="#">IPHONE</a>
+                <a href="#">REDMI</a>
+            </div>
+        </div>
+       
+       
+    </div>
+    <div class="container">
+        <div class="cards">
+            <img src="elec1.jpg">
+            <div class="carts">
+                <h3>price:1400</h3>
+        <p>brand:boult</p>
+        <div class="button"><button>Add to Cart</button>
+            <button>whislist</button>
+        </div>
+            </div>
+        </div>
+        <div class="cards">
+            <img src="elec2.jpg">
+            <div class="carts">
+                <h3>price:4000</h3>
+                <p>brand:boat</p>
+                <div class="button"><button >Add to Cart</button>
+                    <button>whislist</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <img src="elec3.jpg">
+            <div class="carts">
+               
+                <h3>price:3400</h3>
+                <p>brand:samsung</p>
+                <div class="button"><button>Add to Cart</button>
+                    <button>whislist</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <img src="elec4.jpg">
+            <div class="carts">
+                <h3>price:18000</h3>
+                <p>Brand:bose</p>
+                <div class="button"><button>Add to Cart</button>
+                    <button>whislist</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <img src="elec5.jpg">
+            <div class="carts">
+                <h3>price:4100</h3>
+                <p>Brand:sonic</p>
+                <div class="button"><button>Add to Cart</button>
+                    <button>whislist</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <img src="elec6.jpg">
+            <div class="carts">
+                
+                <h3>price:4400</h3>
+                <p>brand:panasonic</p>
+                <div class="button"><button>Add to Cart</button>
+                    <button>whislist</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <img src="elec2.jpg">
+            <div class="carts">
+                <h3>price:4000</h3>
+                <p>brand:iphone</p>
+                <div class="button"><button>Add to Cart</button>
+                    <button>whislist</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <img src="elec2.jpg">
+            <div class="carts">
+               
+                <h3>price:3000</h3>
+                <p>brand:samsung</p>
+                <div class="button"><button>Add to Cart</button>
+                    <button>whislist</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <img src="elec3.jpg">
+            <div class="carts">
+                <h3>price:1800</h3>
+                <p>Brand:iphone</p>
+                <div class="button"><button>Add to Cart</button>
+                    <button>whislist</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<style>
+    *{background-color:#f4f5f7;
+        box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+
+    }
+  .filters{
+  
+    height: 60px;
+     border-top: 2px solid #030303;
+  align-items: center;
+
+ 
+  }
+  .dropdown{
+        position: relative;
+        display: inline-block;
+        width: 200px;
+       margin-top: 20px;
+       text-align: center;
+       margin-left: 17px;
+    }
+    .dropbtn{
+     
+        background-color:#fff;
+        color: black;
+        padding: 12px;
+        font-size: 16px;
+        border:none;
+        cursor: pointer;
+         width: 150px;
+    
+      
+    }
+    .dropdowncontent{
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        box-shadow: 0 8px 16px  rgba(90, 89, 89, 0.8);}
+   
+ 
+    .dropbtn:hover{
+       
+        color: #fff;
+        background-color: black;
+
+    }
+   
+    
+    .dropdowncontent a{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdowncontent a:hover{
+        background-color: rgb(8, 68, 68);
+        color: #fff;
+
+    }
+    .dropdown:hover .dropdowncontent{
+display: inline-block;
+width: 140px;
+margin-left: 25px;
+border:1px solid #333;
+    }
+    
+
+    .dropdown:hover .dropdowncontent{
+display: block;
+    }
+
+    .header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #9db6c9;
+      height: 100px;
+       
+
+    }
+    .header button{
+        width:60px;
+        margin-left: 70px; 
+    position: relative;
+    top:5px;
+    background-color:black;
+        padding: 0px;
+      padding: 7px;
+        color:#fff;
+       border-radius: 5px;
+       
+    }
+    .header h1{
+       text-transform: uppercase;
+       margin-top: 10px;
+       margin-right: 650px;
+       background-color: #9db6c9;
+       
+    }
+    .container{
+        display: flex;
+        gap:35px;
+        flex-wrap: wrap;
+       padding-left: 60px;
+       margin-top: 30px;
+    }
+   
+    .cards{
+       
+        background-color:#fff;
+        padding:3px;
+        border-radius: 8px;
+        box-shadow: 0 0 18px rgba(0,0,0,0.05);
+    }
+    .cards img{
+        width: 100%;
+        height: 300px;
+        border-radius: 3px;
+    }
+    .carts{
+        padding: 15px;
+        background-color:#fff;
+    }
+    h3{ background-color:#fff;
+        font-size: 20px;
+        font-weight: 500;
+        color:black;
+        text-transform: capitalize;
+    }
+    p{ background-color:#fff;
+        font-size: 18px;
+        color: black;
+        padding:5px 1px;
+        text-transform: capitalize;
+        
+    }
+    .button{
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+       
+        
+    }
+    .button button{
+        border: 1px solid #333;
+        height: 30px;
+        width: 80px;
+        border-radius: 5px;
+        color: #fff;
+        background-color: black;
+    }
+
+</style>
+
+</html>

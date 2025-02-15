@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+   
+</head> 
+
+<body>
+    <div class="login-container">
+        <h1 style="color:black;">signin</h1>
+        <form id="loginform">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <label for="phone">Phone No:</label>
+            <input type="tel"pattern="[0-9]*" id="phone" name="phone" placeholder="Enter your phone number">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+
+            <div class="radio-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="others">
+                <label for="female">others</label>
+            </div>
+
+            <label for="language">Language:</label>
+            <select id="language" name="language">
+                <option value="tamil">Tamil</option>
+                <option value="english">English</option>
+                <option value="telugu">Telugu</option>
+                <option value="malayalam">Malayalam</option>
+                <option value="kannada">Kannada</option>
+                <option value="hindi">Hindi</option>
+            </select>
+
+         <button class="button">submit</button>
+        </form>
+    </div>
+    <script src="max.js"></script>
+</body>
+<style>
+    body {
+        background-color:lightblue;
+        font-family: Arial, sans-serif;
+        display:flex;
+      justify-content:center;
+       align-items:center;
+        margin: 0;
+        margin-top: 40px;
+        
+    }
+    .login-container {
+        background-color: #fff;
+        border-radius: 8px;
+        width: 390px;
+        padding: 20px;
+        box-sizing: border-box;
+        border-color:lightgrey;
+        border-width:1px;
+        border-style:solid  
+    }
+    .login-container h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .login-container label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"],
+    .login-container input[type="tel"],
+    .login-container select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .login-container button {
+        background-color:rgb(63, 4, 102);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .login-container button:hover {
+        background-color: #470981d2;
+    }
+
+    .login-container .radio-group {
+        margin-bottom: 15px;
+    }
+
+    .login-container .radio-group label {
+        margin-right: 5px;
+        display:inline;
+      
+        
+    }
+
+    .login-container select {
+        padding: 10px;
+    }
+</style>
+
+</html>

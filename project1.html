@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+ 
+</head>
+<body>
+    <header>Product Detail</header>
+    <div class="product-container">
+        <div class="focusimg">
+            <img src="dress2.jpg" alt="Max Printed Straight Kurta">
+        </div>
+        <div class="detail">
+            <h3>Max</h3>
+            <h4>Printed Straight Kurta</h4>
+            <div class="rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </div>
+            <div class="rating-result">Rating: 4.3</div>
+            <div class="price">Price: ₹450</div>
+            <div class="discount">30% Off</div>
+            <div class="box">
+                <h1>Select Size</h1>
+                <div class="size">
+                    <div>XS</div>
+                    <div>S</div>
+                    <div>M</div>
+                    <div>L</div>
+                    <div>XL</div>
+                    <div>XXL</div>
+                </div>
+                <div class="sizebutton">
+                    <button type="button" onclick="window.location.href='dress.html'">Cancel</button>
+                    <button type="button">Add to Bag</button>
+                </div>
+            </div>
+            <div class="productdetail">
+                <h2>Product Details:</h2>
+                <ul>
+                    <li>Package contains: 1 Kurta</li>
+                    <li>Machine wash</li>
+                    <li>100% Cotton</li>
+                    <li>type:straight neck
+                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+       
+        background-color: #f9f9f9;
+        color: #333;
+    }
+    header {
+        height: 60px;
+        width: 100%;
+        text-align: center;
+        background-color: #9db6c9;
+        padding: 15px 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .product-container {
+        width: 100%;
+        margin: 20px auto;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        background-color: #fff;
+        
+    }
+    .focusimg {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: beige;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .focusimg img {
+        max-width: 100%;
+    
+        border-radius: 8px;
+    }
+    .detail {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid gray;
+        border-radius: 8px;
+    }
+    .detail h3, .detail h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .rating {
+        display: flex;
+        margin: 10px 0;
+    }
+    .rating span {
+        color: gold;
+        font-size: 20px;
+    }
+    .price {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .discount {
+        font-size: 18px;
+        color: green;
+    }
+    .box {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #b1adad;
+        border-radius: 8px;
+        background-color: white;
+    }
+    .box h1 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .size {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+    .size div {
+        background-color: #fff;
+        height: 40px;
+        width: 40px;
+        border: 1px solid #d6d5d5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .size div:hover {
+        background-color: black;
+        color: white;
+    }
+    .sizebutton {
+        display: flex;
+        justify-content: space-around;
+    }
+    .sizebutton button {
+        width: 200px;
+        height: 40px;
+        background-color: black;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .sizebutton button:hover {
+        background-color: #444;
+    }
+    .productdetail {
+        margin-top: 20px;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+    }
+    .productdetail ul {
+        list-style-type: none;
+        padding: 0;
+    
+    }
+    .productdetail li {
+        margin: 5px 0;
+        font-size: 20px;
+    }
+    @media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+    }
+    .focusimg, .detail {
+        width: 100%;
+    }
+}
+
+</style>
+</html>

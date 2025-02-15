@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   
+</head>
+<body>
+    <div class="header">
+        <button onclick="window.history.back();">
+<i class="fa-solid fa-arrow-left"></i></button>
+        <h1>Wishlist</h1>
+    </div>
+    <div class="filters">
+        <div class="dropdown">
+            <button class="dropbtn">price</button>
+            <div class="dropdowncontent">
+                <a href="#">&#8377 0 -&#8377 500</a>
+                <a href="#">&#8377 501 - &#8377 1000</a>
+                <a href="#">&#8377 1001 - &#8377 2000</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">colors</button>
+            <div class="dropdowncontent">
+                <a href="#">Red</a>
+                <a href="#">Blue</a>
+                <a href="#">Green</a>
+                <a href="#">Black</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">categories</button>
+            <div class="dropdowncontent">
+                <a href="#">dress</a>
+                <a href="#">beuty product</a>
+                <a href="#">travel items</a>
+                <a href="#">medicine</a>
+                <a href="#">shoes</a>
+                <a href="#">jewellery</a>
+                <a href="#">stationery</a>
+                <a href="#">toys</a>
+                <a href="#">kitchen</a>
+                <a href="#">watch</a>
+                <a href="#">mobiles</a>
+                <a href="#">electronics</a>
+
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">discount</button>
+            <div class="dropdowncontent">
+                <a href="#">10-30%</a>
+                <a href="#">30-60%</a>
+                <a href="#">60-100%</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">rating</button>
+            <div class="dropdowncontent">
+                <a href="#">1 Star</a>
+                <a href="#">2 Stars</a>
+                <a href="#">3 Stars</a>
+                <a href="#">4 Stars</a>
+                <a href="#">5 Stars</a>
+            </div>
+        </div>
+       
+        <div class="dropdown">
+            <button class="dropbtn">brands</button>
+            <div class="dropdowncontent">
+                <a href="#">avaasa</a>
+                <a href="#">Stripe</a>
+                <a href="#">Pramid</a>
+                <a href="#">avaasa by dhuni</a>
+                <a href="#">puma</a>
+                <a href="#">Prisma</a>
+                <a href="#">max</a>
+                <a href="#">Siyahi</a>
+                <a href="#">samsung</a>
+                <a href="#">apple</a>
+                <a href="#">vivo</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="cards" data-name="ipnone" data-price="14600" data-brand="Realme" data-image="mob5.jpg">
+            <img src="mob5.jpg" alt="Realme Smartphone">
+            <div class="carts">
+                <h3>Price: $14600</h3>
+                <p>Brand:iphone</p>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat similar blocks for other products -->
+           <div class="cards" data-name="Realme Smartphone" data-price="14600" data-brand="Realme" data-image="mob7.jpg">
+            <img src="mob7.jpg" alt="Realme Smartphone">
+            <div class="carts">
+                <h3>Price: $14600</h3>
+                <p>Brand: Realme</p>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards"data-name="max kurti"data-price="1200"data-brand="max"data-image="dress1.jpg>">
+            <img src="dress1.jpg">
+            <div class="carts">
+                <h3>price: &#8377 1200</h3>
+        <p>brand:max</p>
+        <div class="rating">
+            <span class="star1" >&#9733;</span>
+            <span class="star2" >&#9733;</span>
+            <span class="star3" >&#9733;</span>
+            <span class="star4" >&#9733;</span>
+            <span class="star5">&#9733;</span>
+        </div>
+        <div id="rating-result">Rating: 4</div>
+        <div class="button">
+            <button>Add to Cart</button>
+            <button onclick="addToWishlist(this)">Add to Wishlist</button>
+        </div>
+            </div>
+      
+    </div>
+    <div class="cards" data-name="Realme Smartphone" data-price="14600" data-brand="Realme" data-image="mob2.jpg">
+        <img src="mob2.jpg" alt="Realme Smartphone">
+        <div class="carts">
+            <h3>Price: $10600</h3>
+            <p>Brand:samsung</p>
+            <div class="button">
+                <button>Add to Cart</button>
+                <button onclick="addToWishlist(this)">Add to Wishlist</button>
+            </div>
+        </div>
+    </div>
+        <div class="cards" data-name="alfonsa kurti"data-price="1000"data-brand="alfansa"data-image="dress4.jpg">
+            <img src="dress4.jpg">
+            <div class="carts">
+               
+                <h3>price:&#8377 300</h3>
+                <p>brand:alfonsa</p>
+                <div class="rating">
+                    <span class="star1" >&#9733;</span>
+                    <span class="star2" >&#9733;</span>
+                    <span class="star3" >&#9733;</span>
+                    <span class="star4" >&#9733;</span>
+                    <span class="star5">&#9733;</span>
+                </div>
+                <div id="rating-result">Rating: 4</div>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards" data-name="siyahi kurti"data-price="5000"data-brand="alfansa"data-image="dress5.jpg">
+            <img src="dress5.jpg">
+            <div class="carts">
+                <h3>price:&#8377 1800</h3>
+                <p>Brand:siyahi</p>
+                <div class="rating">
+                    <span class="star1" >&#9733;</span>
+                    <span class="star2" >&#9733;</span>
+                    <span class="star3" >&#9733;</span>
+                    <span class="star4" >&#9733;</span>
+                    <span class="star5">&#9733;</span>
+                </div>
+                <div id="rating-result">Rating: 4</div>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+    
+            </div>
+        </div>
+        
+      <div class="cards" data-name="max kurti"data-price="1000"data-brand="max"data-image="a41c29e2-cfc8-4d0a-9e6d-fe8096054b6d.jpg">
+        <img src="a41c29e2-cfc8-4d0a-9e6d-fe8096054b6d.jpg">
+        <div class="carts">
+            
+            <h3>price: &#8377 400</h3>
+            <p>brand:max</p>
+            <div class="rating">
+                <span class="star1" >&#9733;</span>
+                <span class="star2" >&#9733;</span>
+                <span class="star3" >&#9733;</span>
+                <span class="star4" >&#9733;</span>
+                <span class="star5">&#9733;</span>
+            </div>
+            <div id="rating-result">Rating: 4</div>
+            <div class="button">
+                <button>Add to Cart</button>
+                <button onclick="addToWishlist(this)">Add to Wishlist</button>
+            </div>
+        </div>
+       </div>
+          <div class="cards" data-name="Realme Smartphone" data-price="14600" data-brand="Realme" data-image="mob4.jpg">
+            <img src="mob4.jpg" alt="Realme Smartphone">
+            <div class="carts">
+                <h3>Price: $14600</h3>
+                <p>Brand: Realme</p>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+          <div class="cards" data-name="Realme Smartphone" data-price="10000" data-brand="iphone" data-image="mob7.jbg">
+            <img src="mob7.jpg" alt="Realme Smartphone">
+            <div class="carts">
+                <h3>Price: $10000</h3>
+                <p>Brand: iphone</p>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards" data-name="alfonsa kurti"data-price="1000"data-brand="alfansa"data-image="dress4.jpg">
+            <img src="dress6.png">
+            <div class="carts">
+                <h3>price: &#8377 600</h3>
+                <p>Brand:dhiya</p>
+                <div class="rating">
+                    <span class="star1" >&#9733;</span>
+                    <span class="star2" >&#9733;</span>
+                    <span class="star3" >&#9733;</span>
+                    <span class="star4" >&#9733;</span>
+                    <span class="star5">&#9733;</span>
+                </div>
+                <div id="rating-result">Rating: 4</div>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+    
+            </div>
+        </div>
+        <div class="cards" data-name="samskurti"data-price="1000"data-brand="sams"data-image="dress7.jpg">
+            <img src="dress7.png">
+            <div class="carts">
+                
+                <h3>price:&#8377 400</h3>
+                <p>brand:sams</p>
+                <div class="rating">
+                    <span class="star1" >&#9733;</span>
+                    <span class="star2" >&#9733;</span>
+                    <span class="star3" >&#9733;</span>
+                    <span class="star4" >&#9733;</span>
+                    <span class="star5">&#9733;</span>
+                </div>
+                <div id="rating-result">Rating: 4</div>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards" data-name="sams kurti"data-price="1000"data-brand="sams"data-image="dress2.jpg">
+          <img src="dress2.jpg">
+          <div class="carts">
+              
+              <h3>price:&#8377 400</h3>
+              <p>brand:sams</p>
+              <div class="rating">
+                <span class="star1" >&#9733;</span>
+                <span class="star2" >&#9733;</span>
+                <span class="star3" >&#9733;</span>
+                <span class="star4" >&#9733;</span>
+                <span class="star5">&#9733;</span>
+            </div>
+            <div id="rating-result">Rating: 4</div>
+            <div class="button">
+                <button>Add to Cart</button>
+                <button onclick="addToWishlist(this)">Add to Wishlist</button>
+            </div>
+          </div>
+      </div>
+          <div class="cards" data-name="Realme Smartphone" data-price="14000" data-brand="Realme" data-image="mob5.jbg">
+            <img src="mob5.jpg" alt="Realme Smartphone">
+            <div class="carts">
+                <h3>Price: $1400</h3>
+                <p>Brand: Realme</p>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+          <div class="cards" data-name="Realme Smartphone" data-price="15600" data-brand="vivo" data-image="mob4.jpg">
+            <img src="mob4.jpg" alt="Realme Smartphone">
+            <div class="carts">
+                <h3>Price: $15600</h3>
+                <p>Brand: vivo</p>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+          <div class="cards" data-name="Realme Smartphone" data-price="14600" data-brand="Realme" data-image="mob4.jpg">
+            <img src="mob4.jpg" alt="Realme Smartphone">
+            <div class="carts">
+                <h3>Price: $14600</h3>
+                <p>Brand: Realme</p>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+          <div class="cards" data-name="samsung Smartphone" data-price="14600" data-brand="Realme" data-image="mob8.jbg">
+            <img src="mob8.jpg" alt="Realme Smartphone">
+            <div class="carts">
+                <h3>Price: $19600</h3>
+                <p>Brand: samsung</p>
+                <div class="button">
+                    <button>Add to Cart</button>
+                    <button onclick="addToWishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    
+    <script>
+        // Function to add product to wishlist
+        function addToWishlist(button) {
+            const card = button.closest('.cards');
+            const product = {
+                name: card.getAttribute('data-name'),
+                price: card.getAttribute('data-price'),
+                brand: card.getAttribute('data-brand'),
+                image: card.getAttribute('data-image')
+            };
+    
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            wishlist.push(product);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert(`${product.name} added to wishlist!`);
+        }
+    </script>
+    </body>
+    <style>
+     *{background-color:#f4f5f7;
+        box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+    .filters{
+    
+    height: 60px;
+  
+    align-items: center;
+    
+    
+    }
+    .dropdown{
+      position: relative;
+      display: inline-block;
+      width: 200px;
+     margin-top: 20px;
+     text-align: center;
+     margin-left: 17px;
+    }
+    .dropbtn{
+    
+      background-color:#fff;
+      color: black;
+      padding: 12px;
+      font-size: 16px;
+      border:none;
+      cursor: pointer;
+       width: 150px;
+    
+    
+    }
+    .dropdowncontent{
+      display: none;
+      position: absolute;
+      min-width: 150px;
+      box-shadow: 0 8px 16px  rgba(90, 89, 89, 0.8);}
+    
+    
+    .dropbtn:hover{
+     
+      color: #fff;
+      background-color: black;
+    
+    }
+    
+    
+    .dropdowncontent a{
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdowncontent a:hover{
+      background-color: rgb(8, 68, 68);
+      color: #fff;
+    
+    }
+    .dropdown:hover .dropdowncontent{
+    display: inline-block;
+    width: 140px;
+    margin-left: 25px;
+    border:1px solid #333;
+    }
+    
+    
+    .dropdown:hover .dropdowncontent{
+    display: block;
+    }
+    
+   
+    i{
+    color: black;
+    font-size: 20px;
+    background-color: #9db6c9;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.header h1{
+    margin: 0 auto;
+    background-color: #9db6c9;
+}
+.header {
+    display: flex;
+  border-bottom: none;
+    align-items: center;
+    background-color: #9db6c9;
+    height: 80px;
+    padding: 0 20px;
+}
+
+.header button {
+    margin-left: 0;
+    order:-1;
+    background-color: #9db6c9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+body::-webkit-scrollbar{
+    display:none;
+}
+
+    .container{
+      display: flex;
+      gap:35px;
+      flex-wrap: wrap;
+     padding-left: 60px;
+     margin-top: 30px;
+    }
+    
+    .cards{
+      width: 280px;
+      background-color:#fff;
+      padding:3px;
+      border-radius: 8px;
+      box-shadow: 0 0 18px rgba(0,0,0,0.05);
+    }
+    .cards img{
+      width: 100%;
+      height: 300px;
+      border-radius: 3px;
+    }
+    .carts{
+      padding: 15px;
+      background-color:#fff;
+    }
+    h3{ background-color:#fff;
+      font-size: 20px;
+      font-weight: 500;
+      color:black;
+      text-transform: capitalize;
+    }
+    p{ background-color:#fff;
+      font-size: 18px;
+      color: black;
+      padding:5px 1px;
+      text-transform: capitalize;
+      
+    }
+    .button{
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+     
+      
+    }
+    .button button{
+      border: 1px solid #333;
+      height: 30px;
+      width: 80px;
+      border-radius: 5px;
+      color: #fff;
+      background-color: black;
+    }
+    
+    
+    </style>
+    </html>
+    

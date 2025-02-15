@@ -1,0 +1,506 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body::-webkit-scrollbar{
+    display:none;
+}
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Make sure the header is on top */
+}
+
+.con1 {
+    padding-top: 80px; /* Add space for the fixed header */
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: rgba(0,0,0,0.15)1.9px 1.95px 2.6px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+label.logo {
+    font-size: 40px;
+   font-weight: bolder;
+    color:#503975;
+    transition: color 0.3s ease;
+    margin-left: 15px;
+}
+
+label.logo:hover {
+    color: #5d0ae2;
+}
+
+.searchinputcontainer {
+    position: relative;
+    width: 250px;
+}
+
+#searchInput {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border:1px solid #503975;
+  box-shadow:  4px 2px 4px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.Previous-Searches {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #1e1e1e;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.Previous-Searches.visible {
+    display: block;
+}
+
+.Previous-Searches div {
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Previous-Searches div:hover {
+    background-color: #f1f1f1;
+}
+
+
+.navbarlinks {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #503975;
+}
+
+.navbarlink {
+    color: #503975;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbarlink:hover {
+    color: #5d0ae2;
+    background-color: rgba(93, 10, 226, 0.1);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdowncontent {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    min-width: 160px;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdowncontent {
+    display: block;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    .searchinputcontainer {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .navbarlinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbarlink {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    label.logo {
+        font-size: 32px;
+        margin: 10px 0;
+    }
+
+    .dropdowncontent {
+        position: static;
+        margin-top: 10px;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbarlink {
+        font-size: 12px;
+    }
+    
+    label.logo {
+        font-size: 28px;
+    }
+}
+
+.categories-bar {
+ 
+    display: flex;
+    overflow-x: auto;
+    background-color: #503975;
+    padding: 10px;   
+}
+.category-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 20px;
+}
+.category-item span{
+    text-transform: capitalize;
+}
+.todaydeals{
+    background-color:#f4f5f7;
+    display: flex;
+    flex-flow:row;
+    justify-content: space-evenly;
+margin-top: 10px;
+}
+.todaydeals div h3,h1{
+    animation-name: colora;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+@keyframes colora{
+    from{color:black;
+}
+to{ color:gold}
+}
+
+.todaydeals div h3,h1{
+    padding: 20px;
+    font-size: 20px;
+}
+.todaydeals div h1{
+    margin-left: 30px;
+}
+#current-time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recentview{
+color: black;
+font-size: 25px;
+text-transform: capitalize;
+text-align: center;
+margin-top: 20px;
+
+
+}
+.upcomingdeals div h2{
+    animation-name: h2color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    background-color: antiquewhite;
+    width: 120px;
+    border-radius: 5px;
+   }
+   @keyframes h2color{
+   from{
+       background-color: antiquewhite;
+   }to{
+     background-color: yellow;
+   }}
+   .upcomingdeals div h1{
+    animation-name: h1color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+      
+   }
+   @keyframes h1color{
+   from{
+       color:black;
+   }to{
+       color:rgb(247, 51, 2);
+   }
+   }
+   .upcomingdeals div h4{
+    color: rgb(9, 151, 151);
+       animation-name: sclanimate;
+       animation-duration:2ms;
+       animation-iteration-count: infinite;
+      
+   }
+   @keyframes sclanimate{
+   from{
+       color: rgb(9, 151, 151);
+   }to{
+       color: blueviolet;
+   }
+   }
+   .deal1{
+     height: 1000px;
+      width: 100%;
+      display: flex;
+      flex-flow:column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(170, 166, 249);
+      gap:10px;
+   }
+   .upcomingdeals{
+       display: flex;
+       width: 90%;
+       height: 300px;
+       flex-flow: row;
+       justify-content: space-around;
+       background-color: #fff;
+       border: 2px dotted black;
+       border-radius: 10px;
+       animation-name: upclr;
+       animation-duration: 2s;
+       animation-iteration-count: infinite;
+   
+       
+   }
+   @keyframes upclr{
+       from{
+           border: 2px dotted black;    
+       }
+       to{
+           border:5px dotted gold;
+       }
+   }
+   .upcomingdeals div{
+   justify-content: center;
+       display: flex;
+       align-items: center;
+       flex-flow: column;
+       padding: 40px;
+      gap:20px
+   }
+   .upcomingdeals div img{
+       height: 250px;
+       width: 200px;
+       border-radius: 40px 0px 40px 0px;
+       
+   }.deal1 div h3{
+       color:black;
+       font-size: 20px;
+       text-transform: capitalize;
+       animation-name: h3color;
+       animation-duration: 2s;
+       animation-iteration-count: infinite;
+   }
+   @keyframes h3color{
+       from{
+           opacity:1;
+       }
+       to{
+           opacity:0.6;
+       }
+   }
+   
+.products {
+   
+    padding: 2rem 0;
+    background: #f4f4f4;
+    width: 100%;
+    display: flex;
+  
+}
+.container5{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap:10px;
+    height: 150px;
+   
+   
+}
+.imagescontain, .imagescontain1 { width:200px;
+    overflow: hidden;}
+
+      #slideshow{
+        position: absolute;
+       display: block;
+       width: 200px;
+       height: 100px;
+    
+      
+    }
+    .imagescontain img
+    {margin-top: 100px;
+       width: 200px;
+        height: 100px;
+    }
+    .imagescontain  .imagescontain1 img
+    {
+       width: 300px;
+        height: 100px;
+    }
+    .recentview{
+        line-height: 70px;
+    }
+
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1rem;
+    margin: 12px;
+    display: inline-block;
+}
+
+.star1,.star2,.star3,.star4{
+    color:gold;
+}
+.star5{
+    color: #333;
+}
+.product img {
+    max-width: 100%;
+    height: 280px;
+    width: 350px;
+}
+.product button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+.aboutcontainer {
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    background: #333;
+   
+}
+
+.front {
+    padding-top: 5px;
+    background-color: white;
+    display: flexbox;
+}
+
+.front1 {
+    width: 100%;
+    padding: 20px;
+    height: 400px;
+    margin-left: 50px;
+}
+
+.foot{
+    width: 100%;
+    height:480px;
+    background-color: #333;
+    color: #fff;
+}
+.foot21 {
+  
+    text-align: center;
+    padding: 20px;
+    text-transform: capitalize;
+    font-size: 16px;}
+.foot2 {
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.foot2 h3{
+    margin-bottom: 10px;
+    
+}.foot2 div{
+    display: flex;
+    flex-flow: row;
+  justify-content: center;
+}
+.foot2 div a i{
+    padding: 20px;
+    font-size: larger;
+}
+.foot3  {
+
+padding: 60px;
+
+}
+.foot4 div{
+    background-color:#1e1e1e;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    padding: 10px;
+    border: 1px dotted #fff;
+}
+.foot4{
+    display: flex;
+    gap: 200px;
+}
+.foot4 p{
+   padding-top: 10px;
+}
+.foot2 div a i{
+   color: #fff;
+}
+.foot4 div i{
+    margin-top: 40%;
+}

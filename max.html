@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta name="viewport" content="width-device width,initial scale=1.0">
+    <meta charset="UTF-8">
+    <title>MAX</title>
+    <link rel="stylesheet" href="max.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    
+    <nav class="header">
+        <div class="logo-container">
+            <label class="logo"><span style="text-transform: uppercase;">m</span>ax</label>
+        </div>
+    
+        <div class="searchinputcontainer">
+            <input type="search" placeholder="Try saree, kutis" id="searchInput" oninput="showPreviousSearches()" onkeydown="handleKeyDown(event)">
+            <div class="Previous-Searches" id="recentItems"></div>
+        </div>
+    
+        <div class="navbarlinks">
+            <div><a href="account.html" class="navbarlink">ACCOUNT</a></div>
+            <div><a href="whis.html" class="navbarlink">WHISLIST</a></div>
+            <div><a href="bag.html" class="navbarlink">CART</a></div>
+            <div><a href="notification.html" class="navbarlink">NOTIFICATIONS</a></div>
+    
+            <div class="dropdown">
+                <div class="navbarlink">DOWNLOAD</div>
+                <div class="dropdowncontent">
+                    <a href="#"><img src="play.webp" alt="Play Store" style="width: 140px; height: auto;"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+      
+    <nav class="con1">
+    <div class="categories-bar">
+        <a href="jewellery.html" class="category-item"><span>Jewellery</span></a>
+        <a href="index.html" class="category-item"><span>Mobiles</span></a>
+        <a href="fashion.html" class="category-item"><span>Fashion</span></a>
+        <a href="electronics.html" class="category-item"><span>Electronics</span></a>
+        <a href="dress.html" class="category-item"><span>dress </span></a>
+        <a href="#beauty" class="category-item"><span>Beauty</span></a>
+        <a href="#travel" class="category-item"><span>Travel</span></a>
+        <a href="#sports" class="category-item"><span>stationery</span></a>
+        <a href="#travel" class="category-item"><span>Kitchen</span></a>
+        <a href="#sports" class="category-item"><span>Furnitures</span></a>
+        <a href="#books" class="category-item"><span>Books</span></a>
+        <a href="#toys" class="category-item"><span>Toys</span></a>
+        <a href="#toys" class="category-item"><span>Healthcare</span></a>
+   
+    </div>
+</nav>
+    <div class="todaydeals">
+      
+        <div class="div">
+            <h3> 12  HOURS TO GO</h3>   
+            <h2 id="countdown"></h2>
+      </div>
+    </div>
+    <img src="diwali.jpg" style="width: 100%;height: 350px;">
+   
+    <div class="deal1">
+        <div class="upcomingdeals">
+           <div> <h3>starts at</h3>
+               <h1 id="fonamime">1:00 PM</h1>
+               <h2><a href="click.html" >click & get</a></h2> 
+               <h3>Don't miss the offer</h3>
+               <h4>limited stocks are available... BUY your FAVOURITE soon...</h4>
+           </div>
+           <div><img src="deal20.jpeg"></div>
+       </div>
+       <div class="upcomingdeals">
+           <div> <h3>starts at</h3>
+               <h1 id="fonamime">11:00 PM</h1>
+               <h2><a href="click.html" >click & get</a></h2> 
+               <h3>Don't miss the offer</h3>
+               <h4>limited stocks are available... BUY your FAVOURITE soon...</h4>
+           </div>
+           <div><img src="deal21.jpeg"></div>
+       </div>
+       <div class="upcomingdeals">
+           <div> <h3>starts at</h3>
+               <h1 id="fonamime">10:00 PM</h1>
+               <h2><a href="click.html" >click & get</a></h2> 
+               <h3>Don't miss the offer</h3>
+               <h4>limited stocks are available... BUY your FAVOURITE soon...</h4>
+           </div>
+           <div><img src="deal8.webp"></div>
+       </div>
+   </div>
+   <div class="container5">
+   
+<div class="imagescontain">
+    
+    <img src="deal23.jpeg">
+</div>
+<div class="imagescontain2">
+   
+
+<div class="imagescontain1">
+    <img id="slideshow"src="deal23.jpeg"style="margin-bottom: 30px;">
+</div>
+</div>
+<div class="imagescontain">
+    <img src="deal23.jpeg">
+</div>
+
+</div>
+</body>
+
+    <main>
+        <header class="recentview">recently viewed</header>
+        <div class="products">
+
+            <article class="product">
+                <img src="dress2.jpg">
+                <h3>price:4000</h3>
+                <p>Brand:Dhuni</p>
+                <div class="rating">
+                    <span class="star1" >&#9733;</span>
+                    <span class="star2" >&#9733;</span>
+                    <span class="star3" >&#9733;</span>
+                    <span class="star4" >&#9733;</span>
+                    <span class="star5">&#9733;</span>
+                </div>
+                <div id="rating-result">Rating: 3</div>
+                <button>WHISLIST</button>
+            </article>
+            <article class="product">
+                <img src="dress3.jpg">
+                <h3>price:400</h3>
+                <p>brand:dhuni</p>
+                <div class="rating">
+                   <span class="star1" >&#9733;</span>
+                    <span class="star2" >&#9733;</span>
+                    <span class="star3" >&#9733;</span>
+                    <span class="star4" >&#9733;</span>
+                    <span class="star5">&#9733;</span>
+                </div>
+                <div id="rating-result">Rating: 4</div>
+                <button>WHISLIST</button>
+            
+
+            </article>
+            <article class="product">
+                <img src="dress4.jpg">
+                <h3>price:4900</h3>
+                <p>Brand:siyahi</p>
+                <div class="rating">
+                    <span class="star1" >&#9733;</span>
+                    <span class="star2" >&#9733;</span>
+                    <span class="star3" >&#9733;</span>
+                    <span class="star4" >&#9733;</span>
+                    <span class="star5">&#9733;</span>
+                </div>
+                <div id="rating-result">Rating: 4.3</div>
+                <button>WHISLIST</button>
+            </article>
+          
+            <article class="product">
+                <img src="dress1.jpg">
+                <h3>price:300</h3>
+                <p>Brand:fusion</p>
+                <div class="rating">
+                    <span class="star1" >&#9733;</span>
+                    <span class="star2" >&#9733;</span>
+                    <span class="star3" >&#9733;</span>
+                    <span class="star4" >&#9733;</span>
+                    <span class="star5">&#9733;</span>
+                </div>
+                <div id="rating-result">Rating: 4</div>
+                <button>WHISLIST</button>
+            </article>
+            <article class="product">
+                <img src="dress5.jpg">
+                <h3>price:700</h3>
+                <p>brand:avasa</p>
+                <div class="rating">
+                    <span class="star1" >&#9733;</span>
+                    <span class="star2" >&#9733;</span>
+                    <span class="star3" >&#9733;</span>
+                    <span class="star4" >&#9733;</span>
+                    <span class="star5">&#9733;</span>
+                </div>
+                <div id="rating-result">Rating: 4</div>
+                <button>WHISLIST</button>
+            </article>
+            </div>
+       
+      
+    </main>
+
+
+   <footer class="foot">
+    <div class="foot1">
+        <div class="foot11">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="foot12">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="foot13">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+<div class="foot2">
+    
+    <h3>show us some love on the social media</h3>
+    <div>
+        <a href="https://facebook.com" >    <i class="fa-brands fa-facebook"></i></a>
+        <a href="https://instagram.com" >  <i class="fa-brands fa-twitter"></i></a>
+        <a href="https://instagram.com" > <i class="fa-brands fa-instagram"></i></a>
+        <a href="https://youtube.com" > <i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="foot21">
+        <h1>english</h1>
+        <h1>switch account</h1>
+        <h1>sign out</h1>
+    
+    </div>
+    <div class="foot4">
+      <div><i class="fa-solid fa-truck-fast"></i></div>
+     
+      <div><i class="fa-solid fa-tag"></i></div>
+      
+      <div><i class="fa-solid fa-gift"></i></div>
+      
+     </div>
+     <div class="foot4">
+     <p>free shipping</p>
+     <p>1900+brands</p>
+     <p>100% authentic</p>
+    </div>
+    <div class="foot3"id="footer-contact">
+     </div> 
+      
+    </div>
+</div>
+   </footer>   
+ 
+</body>
+<script>
+
+
+const contactInfo = {
+    address: "141/A Southstreet, T. Nagar, Chennai",
+    phone: "-9466777778"
+};
+
+
+function addContactInfo() {
+    const container = document.getElementById("footer-contact");
+
+
+    const addressDiv = document.createElement("div");
+    addressDiv.textContent = contactInfo.address;
+    container.appendChild(addressDiv);
+
+    const phoneDiv = document.createElement("div");
+    phoneDiv.textContent = contactInfo.phone;
+    container.appendChild(phoneDiv);
+}
+
+// Call the function to populate the contact info
+addContactInfo();
+
+
+    const images=['image 10.jfif','images (1).jfif','download3.jfif']
+    let currentIndex=0;
+    function changeImage(){
+    const imgement=document.getElementById('slideshow');
+    imgement.src=images[currentIndex];
+    currentIndex=(currentIndex+1)% images.length;}
+setInterval(changeImage,1000);
+
+    document.querySelectorAll('.product button').forEach(button => {
+        button.addEventListener('click', () => {
+            alert('Added to whislist!');
+        });
+    });
+
+var hours=24;
+var countdownElement=document.getElementById('countdown');
+function updateCountdown(){
+    if(hours>0){
+        hours--;
+    
+    countdownElement.textContent=hours;}
+    else{
+        clearInterval(countdownInterval);
+        countdownElement.textContent="times up";
+    }
+}
+var countdownInterval=setIntervel(updateCountdown,10);
+updateCountdown();
+const swiper=new swiper('swippercontainer',{
+    loop:true,autoplay:{delay:3000,},navigation:{}
+})
+</script>
+<script src="max.js"></script>
+</html>

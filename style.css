@@ -1,0 +1,136 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for consistent padding and centering */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+header h1 {
+    display: inline-block;
+}
+nav ul {
+    list-style: none;
+    display: inline-block;
+}
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero section styles */
+.hero {
+    background: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
+.hero h2 {
+    font-size: 2rem;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Product grid styles */
+.products {
+    padding: 2rem 0;
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: calc(33.333% - 1rem);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* Contact section styles */
+.contact {
+    background: #f4f4f4;
+    padding: 2rem 0;
+}
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+}
+.contact button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+    }
+    .product {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+    nav ul li a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+}

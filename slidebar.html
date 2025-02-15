@@ -1,0 +1,103 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Load After Progress Bar</title>
+  <style>
+    /* Loading Bar Style */
+    .loading-bar-container {
+      width: 100%;
+      height: 30px;
+      background-color: #f3f3f3;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .loading-bar {
+      width: 0;
+      height: 100%;
+      background-color: #4caf50;
+      border-radius: 5px;
+    }
+
+    /* Image Style */
+    .image-container {
+      display: none;
+      margin-top: 20px;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading Bar -->
+  <div class="loading-bar-container">
+    <div class="loading-bar" id="loadingBar"></div>
+  </div>
+
+  <!-- Image Container -->
+  <div class="image-container" id="imageContainer">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+  </div>
+  <div class="swippercontainer">
+    <div class="swipper-wrapper">
+        <div class="swipper-slide">
+            <img src="deal1.jfif">
+        </div>
+          <div class="swipper-slide">
+            <img src="deal2.jfif">
+        </div>
+    </div>
+</div>
+<div class="swipwerbuttonnext"></div>
+<div class="swipperbuttonprev"></div>
+<div class="swiperpagination"></div>
+
+  <script>
+    // Function to simulate loading progress
+    function loadProgressBar() {
+      let loadingBar = document.getElementById("loadingBar");
+      let width = 0;
+      let interval = setInterval(function () {
+        if (width >= 100) {
+          clearInterval(interval);
+          displayImages(); // Show images after loading bar finishes
+        } else {
+          width++;
+          loadingBar.style.width = width + "%";
+        }
+      }, 50);
+    }
+
+    // Function to display images one by one
+    function displayImages() {
+      let images = document.querySelectorAll(".image-container img");
+      let index = 0;
+
+      document.getElementById("imageContainer").style.display = "block"; // Show image container
+
+      function showNextImage() {
+        if (index < images.length) {
+          images[index].style.display = "block";
+          index++;
+          setTimeout(showNextImage, 500); // Show next image after 0.5 seconds
+        }
+      }
+
+      showNextImage();
+    }
+
+    // Start loading progress
+    loadProgressBar();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="tim">
+        <div class="display">
+            <button id="time">12:00:00 </button>
+        </div>
+    </div>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .tim {
+        position: absolute;
+        height: 100px;
+        width: 360px;
+        background: linear-gradient(13deg, #14ffe9, #ffeb3b, #ff00e0);
+        border-radius: 10px;
+        animation:animate 1.5s linear infinite;
+    }
+
+    html,
+    body {
+        display: grid;
+        height: 100%;
+        place-items: center;
+
+
+
+    }
+
+    .tim .display {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #1b1b1b;
+        transform: translate(-50%, -50%);
+        height: 85px;
+        width: 345px;
+        background: linear-gradient(13deg, #14ffe9, #ffeb3b, #ff00e0);
+        text-align: center;
+        z-index: 999;
+    }
+
+    .tim .display #time {
+        line-height: 85px;
+        width: 347px;
+        background: black;
+        color: white;
+        font-size: 50px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 10px;
+        
+    }
+    @keyframes animate{
+        100%{
+            filter: hue-rotate(360deg);
+        }
+    }
+</style>
+<script>
+    setInterval(() => {
+    const timeElement = document.getElementById("time");
+    const date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    if (hours > 12) hours -= 12;
+    if (hours === 0) hours = 12;  
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+}, 1000);
+
+</script>
+</body>
+
+</html>
